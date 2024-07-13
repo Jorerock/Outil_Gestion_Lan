@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot:heading>
-        {{$game}}
+        {{$Title}}
     </x-slot:heading>
     
-    <h1>Info du jeu</h1>
-
+    <h1>Info du jeu:</h1>
+    <p>{{$info}}</p>
 </x-layout>

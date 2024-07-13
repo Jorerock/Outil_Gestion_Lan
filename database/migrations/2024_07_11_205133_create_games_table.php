@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->id();
             $table->string('Title');
-            $table->foreignIdFor(App\Models\User::class);
+            $table->longText('Description');
+         //   $table->string('DateSortie');
+          //  $table->foreignIdFor(App\Models\User::class);
             $table->timestamps();
-            $table->timestamps('Add_at');
             
         });
     }

@@ -9,7 +9,7 @@
 
 <ul>
     <?php  foreach($games as $game){  ?>
-        <li> <x-navigation href="/games/{{$game}}"  :active="request()->is('/games/{{$game}}')">{{$game}}</x-navigation></li>
+        <li> <x-navigation href="/games/{{$game->Title}}"  :active="request()->is('/games/{{$game->Title}}')">{{$game->Title}}</x-navigation></li>
     <?php } ?>
 
  </ul> 

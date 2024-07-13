@@ -17,10 +17,9 @@ class GameFactory extends Factory
     public function definition(): array
     {
         return [
-            'Title'     => fake()->name(), 
-            'Add_at'    => now(),
-            'Add_by'    => now(),
-            'Game_id'   => game::factory()
+            'Title'      => fake()->name(), 
+            'Description' => 'Ceci est une Description tres detaille du jeux',
+
         ];
     }
 }
