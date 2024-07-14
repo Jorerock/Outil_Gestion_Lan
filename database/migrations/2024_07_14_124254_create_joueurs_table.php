@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('games', function (Blueprint $table) {
-            $table->string('Title');
-            $table->string('Picture');
+        Schema::create('joueurs', function (Blueprint $table) {
+            $table->id();
+            $table->string('First-name');
+            $table->string('Last-name');
+            $table->string('Url-twitch');
+            $table->string('Url-Youtube');
             $table->longText('Description');
-            $table->string('Type');
+
           //$table->string('DateSortie');
-          //$table->foreignIdFor(App\Models\User::class);
+          //$table->foreignIdFor(App\Models\Vignette::class);
             $table->timestamps();
-            
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('joueurs');
     }
 };

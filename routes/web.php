@@ -8,9 +8,6 @@ Route::get('/', function () {
 
 
 
-
-
-
 route::prefix('/games')->name('games.')->group(function(){
 
 
@@ -18,13 +15,15 @@ route::prefix('/games')->name('games.')->group(function(){
         $games = \App\Models\Game::all();
         return view('games',['games' => $games]);
     });
-        //http://127.0.0.1:8000/games
+    //http://127.0.0.1:8000/games
     
+
     Route::get('/{Title}', function (string $Title ){
-      
-        return view('game-info',['Title' => $Title],['info' => 'Ce jeux est trés bien']);
-        //  http://127.0.0.1:8000/games/quake
+        $game = \App\Models\Game::where('Title',$Title)->first();
+        return view('game-info',['Title' => $Title],['game' => $game]);
     })->name('games');
+    //  http://127.0.0.1:8000/games/quake
+
 });
 
 

@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('games', function (Blueprint $table) {
-            $table->string('Title');
-            $table->string('Picture');
-            $table->longText('Description');
-            $table->string('Type');
-          //$table->string('DateSortie');
-          //$table->foreignIdFor(App\Models\User::class);
+        Schema::create('phases', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            
         });
     }
 
@@ -28,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('phases');
     }
 };

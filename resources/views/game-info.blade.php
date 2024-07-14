@@ -4,5 +4,5 @@
     </x-slot:heading>
     
     <h1>Info du jeu:</h1>
-    <p>{{$info}}</p>
+    <p>{{$game->Description}}</p>
 </x-layout>
